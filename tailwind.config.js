@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         primarytext: "#ffffff",
         accenty: "#f9fafb",
+        foreground: "#0a0a0a",
       },
       borderRadius: {
         standard: "14px",
