@@ -1,63 +1,38 @@
 import { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { name: "Home", link: "/", icon: null },
-  { name: "Projects", link: "/projects", icon: null },
+  { name: "Home", link: "/" },
+  { name: "About", link: "/about" },
+  { name: "Projects", link: "/projects" },
+  { name: "Contact", link: "/contact" },
 ];
 
 const Header = () => {
-  const { scrollYProgress } = useScroll();
-  const [visible, setVisible] = useState(true);
-
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    if (typeof current === "number") {
-      const direction = current - scrollYProgress.getPrevious();
-
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(true);
-      } else {
-        setVisible(direction < 0);
-      }
-    }
-  });
-
+  const [hovered, setHovered] = useState(0);
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        initial={{ opacity: 1, y: -100 }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{ duration: 0.2 }}
-        className={
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4"
-        }
-        style={{
-          backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(17, 25, 40, 0.75)",
-          borderRadius: "12px",
-          border: "1px solid rgba(255, 255, 255, 0.125)",
-        }}>
-        {navItems.map((navItem, idx) => (
-          <a
-            key={`link-${idx}`}
-            href={navItem.link}
-            className={
-              "relative items-center flex space-x-1 text-sm text-neutral-600 dark:text-neutral-50 hover:text-neutral-500 dark:hover:text-neutral-300 !cursor-pointer"
-            }>
-            {navItem.icon && <span>{navItem.icon}</span>}
-            <span>{navItem.name}</span>
-          </a>
-        ))}
-      </motion.div>
-    </AnimatePresence>
+    <header className="fixed left-1/2 top-10 z-[999] -translate-x-1/2 w-full md:w-auto">
+      <nav className="relative animate-jump-in animate-once animate-duration-1000">
+        <ul className="relative grid grid-cols-4 items-center justify-center py-2 border border-white/10 backdrop-blur-md rounded-full shadow-lg transition-all duration-200 ease-in-out mx-2 md:mx-0">
+          {navItems.map((item, index) => (
+            <li
+              key={index}
+              onMouseEnter={() => setHovered(index + 1)}
+              onMouseLeave={() => setHovered(0)}
+              className="relative z-10 px-2 md:px-4 text-center py-2 rounded-full cursor-pointer transition-colors duration-300 text-neutral-300">
+              <Link to={item.link}>{item.name}</Link>
+            </li>
+          ))}
+          <div
+            className={`absolute top-0 h-full w-1/4 bg-white/10 rounded-full transition-all duration-300 ${
+              hovered !== 0 ? "opacity-100" : "opacity-0"
+            } left-0`}
+            style={{
+              transform: `translateX(${hovered ? (hovered - 1) * 100 : 0}%)`,
+            }}></div>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

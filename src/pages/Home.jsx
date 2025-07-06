@@ -1,12 +1,14 @@
+import { Hero, Studies } from "../components";
+
 const Home = () => {
   return (
-    <div className="bg-[#18181b] opacity-70 text-white">
-      <h1>Welcome to My Portfolio</h1>
-      <p>
-        This is the home page where you can find information about me and my
-        projects.
-      </p>
-    </div>
+    <>
+      <Hero />
+      <div>
+        <div class="bg-[#3f64e96e] blur-[150px] w-[570px] h-[180px] -left-64 absolute"></div>
+      </div>
+      <Studies />
+    </>
   );
 };
 
