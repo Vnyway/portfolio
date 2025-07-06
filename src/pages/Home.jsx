@@ -1,13 +1,18 @@
-import { Hero, Studies } from "../components";
+import { Hero, Studies, TechStack } from "../components";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <div className="border-[#e5e5e5] w-screen border-b-[1px] opacity-10 overflow-visible relative">
+      <section class="pb-20 -mb-20 w-screen px-6 border-t border-neutral-800 rounded-t-2xl mx-auto"></section>
+      <div>
         <div className="bg-[#3f64e96e] w-[570px] h-[180px] blur-[150px] opacity-100 -left-64 absolute"></div>
       </div>
       <Studies />
+      <div>
+        <div class="bg-[#3fe9c46e] blur-[130px] w-[750px] h-[264px] -right-64 absolute"></div>
+      </div>
+      <TechStack />
     </>
   );
 };
