@@ -1,4 +1,4 @@
-import { Hero, Studies, TechStack } from "../components";
+import { Hero, Projects, Studies, TechStack } from "../components";
 
 const Home = () => {
   return (
@@ -9,10 +9,11 @@ const Home = () => {
         <div className="bg-[#3f64e96e] w-[570px] h-[180px] blur-[150px] opacity-100 -left-64 absolute"></div>
       </div>
       <Studies />
+      <TechStack />
       <div>
         <div class="bg-[#3fe9c46e] blur-[130px] w-[750px] h-[264px] -right-64 absolute"></div>
       </div>
-      <TechStack />
+      <Projects />
     </>
   );
 };
