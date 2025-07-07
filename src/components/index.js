@@ -4,5 +4,16 @@ import Hero from "./home/Hero";
 import Studies from "./home/Studies";
 import TechStack from "./home/TechStack";
 import Projects from "./home/Projects";
+import Footer from "./Footer";
+import CopiedToast from "./CopiedToast";
 
-export { Background, Header, Hero, Studies, TechStack, Projects };
+export {
+  Background,
+  Header,
+  Hero,
+  Studies,
+  TechStack,
+  Projects,
+  Footer,
+  CopiedToast,
+};

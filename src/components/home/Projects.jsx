@@ -53,15 +53,7 @@ const projects = [
       "This portfolio website showcases my skills, projects, and experience as a front-end developer. It features a modern design, smooth animations, and responsive layout, built with React and Tailwind CSS.",
     link: "https://github.com/Vnyway/portfolio",
     github: "https://github.com/Vnyway/portfolio",
-    tags: [
-      "React",
-      "React Router DOM",
-      "TypeScript",
-      "Redux Toolkit",
-      "Framer Motion",
-      "Tailwindcss",
-      "React Hook Form",
-    ],
+    tags: ["React", "React Router DOM", "Framer Motion", "Tailwindcss"],
   },
 ];
 

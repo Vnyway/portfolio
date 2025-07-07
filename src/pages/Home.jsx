@@ -1,4 +1,5 @@
-import { Hero, Projects, Studies, TechStack } from "../components";
+import { CopiedToast, Hero, Projects, Studies, TechStack } from "../components";
+import { useCopy } from "../context/CopyContext";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
         <div class="bg-[#3fe9c46e] blur-[130px] w-[750px] h-[264px] -right-64 absolute"></div>
       </div>
       <Projects />
+      <div>
+        <div class="bg-[#3f64e96e] w-[570px] h-[180px] blur-[150px] -left-96 opacity-50 absolute"></div>
+      </div>
     </>
   );
 };
