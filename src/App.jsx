@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { Header, Background, Footer, CopiedToast } from "./components";
-import { Home, Projects } from "./pages";
+import { Home, Projects, About } from "./pages";
 import { useCopy } from "./context/CopyContext";
 
 const Layout = () => (
@@ -24,6 +24,7 @@ const App = () => {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
           </Route>
         </Routes>

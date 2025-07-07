@@ -6,6 +6,7 @@ import TechStack from "./home/TechStack";
 import Projects from "./home/Projects";
 import Footer from "./Footer";
 import CopiedToast from "./CopiedToast";
+import HeroSection from "./HeroSection";
 
 export {
   Background,
@@ -16,4 +17,5 @@ export {
   Projects,
   Footer,
   CopiedToast,
+  HeroSection,
 };

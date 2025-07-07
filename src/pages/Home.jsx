@@ -1,5 +1,4 @@
-import { CopiedToast, Hero, Projects, Studies, TechStack } from "../components";
-import { useCopy } from "../context/CopyContext";
+import { Hero, Projects, Studies, TechStack } from "../components";
 
 const Home = () => {
   return (
