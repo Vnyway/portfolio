@@ -7,7 +7,7 @@ const contactLinks = [
     id: 2,
     title: "LinkedIn",
     type: "link",
-    info: "https://www.linkedin.com/in/bohdan-zhytchenko/",
+    info: "https://www.linkedin.com/in/bohdan-zhytchenko-305a67316/",
   },
   { id: 3, title: "GitHub", type: "link", info: "https://github.com/Vnyway" },
   { id: 4, title: "Telegram", type: "link", info: "https://t.me/vnywvy" },
@@ -44,7 +44,7 @@ const Footer = () => {
       <footer className="py-10 mx-auto container max-w-3xl text-neutral-300 px-4 md:px-0 md:py-20 z-50 animate-fade-up animate-once animate-duration-1000 animate-delay-[600ms]">
         <div className="border rounded-lg p-6 flex flex-col md:flex-row justify-between">
           <div className="logo flex flex-col justify-end mb-6 md:mb-0">
-            <p className="second-font text-5xl">
+            <p className="font-fira text-5xl font-medium">
               Bohdan
               <br />
               Zhytchenko

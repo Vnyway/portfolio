@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CopiedToast from "../CopiedToast";
+import { Link } from "react-router-dom";
 
 const handleCopy = (id, info, copied, setCopied) => {
   navigator.clipboard.writeText(info).then(() => {
@@ -70,7 +71,7 @@ const Hero = () => {
           </h1>
           <div className="relative">
             <div className="relative ml-2">
-              <a href="https://t.me/vnywvy">
+              <Link target="_blank" to="https://t.me/vnywvy">
                 <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input h-10 px-4 py-2 relative group overflow-hidden bg-transparent text-gray-50 rounded-full hover:bg-transparent hover:text-gray-50 transition-transform duration-500 hover:scale-105">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -89,13 +90,15 @@ const Hero = () => {
                   <span className="second-font">Contact me</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 transform -translate-x-full group-hover:translate-x-full transition duration-700"></div>
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
         <div className="pt-2 text-center">
           <div className="flex justify-center gap-4">
-            <a href="https://www.linkedin.com/in/bohdan-zhytchenko-305a67316/">
+            <Link
+              target="_blank"
+              to="https://www.linkedin.com/in/bohdan-zhytchenko-305a67316/">
               <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input h-10 relative group overflow-hidden rounded-full p-2 bg-transparent text-gray-50 hover:bg-transparent hover:text-gray-50 transition-transform duration-500 hover:scale-105 hover:-rotate-12">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,8 +117,8 @@ const Hero = () => {
                 </svg>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 transform -translate-x-full group-hover:translate-x-full transition duration-700"></div>
               </button>
-            </a>
-            <a href="https://github.com/Vnyway">
+            </Link>
+            <Link target="_blank" to="https://github.com/Vnyway">
               <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input h-10 relative group overflow-hidden rounded-full p-2 bg-transparent text-gray-50 hover:bg-transparent hover:text-gray-50 transition-transform duration-500 hover:scale-105 hover:-rotate-12">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +136,8 @@ const Hero = () => {
                 </svg>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 transform -translate-x-full group-hover:translate-x-full transition duration-700"></div>
               </button>
-            </a>
-            <a href="https://t.me/vnywvy">
+            </Link>
+            <Link target="_blank" to="https://t.me/vnywvy">
               <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input h-10 relative group overflow-hidden rounded-full p-2 bg-transparent text-gray-50 hover:bg-transparent hover:text-gray-50 transition-transform duration-500 hover:scale-105 hover:-rotate-12">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +154,7 @@ const Hero = () => {
                 </svg>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 transform -translate-x-full group-hover:translate-x-full transition duration-700"></div>
               </button>
-            </a>
+            </Link>
             <button
               onClick={() =>
                 handleCopy(1, "bohdan05zbr@gmail.com", copied, setCopied)
@@ -212,7 +215,7 @@ const Hero = () => {
               </svg>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 transform -translate-x-full group-hover:translate-x-full transition duration-700"></div>
             </button>
-            <a href="/">
+            <Link to="/">
               <button className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input h-10 relative group overflow-hidden rounded-full p-2 bg-transparent text-gray-50 hover:bg-transparent hover:text-gray-50 transition-transform duration-500 hover:scale-105 hover:-rotate-12">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -233,7 +236,7 @@ const Hero = () => {
                 </svg>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 transform -translate-x-full group-hover:translate-x-full transition duration-700"></div>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <CopiedToast

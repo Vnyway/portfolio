@@ -62,6 +62,9 @@ const Projects = () => {
     <section className="pt-10 mx-auto container max-w-3xl px-4 md:px-0 md:pt-20 z-50 animate-fade-up animate-once animate-duration-1000 animate-delay-[600ms]">
       <div className="flex flex-row justify-between mb-5 tracking-widest">
         <p className="text-xl font-light text-neutral-300">Projects</p>
+        <span className="text-l font-light items-center text-neutral-300 transition">
+          Click the card to see the live demo.
+        </span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

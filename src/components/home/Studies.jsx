@@ -6,7 +6,7 @@ const studies = [
     time: "Sep 2022 – Present",
     title:
       'National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute"',
-    degree: "Bachelor's in Information Systems and Technologies (3rd year)",
+    degree: "Bachelor's in Information Systems and Technologies (4th year)",
   },
   {
     image: "./images/school.png",

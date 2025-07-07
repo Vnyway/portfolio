@@ -5,7 +5,6 @@ const navItems = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Projects", link: "/projects" },
-  { name: "Contact", link: "/contact" },
 ];
 
 const Header = () => {
@@ -13,7 +12,7 @@ const Header = () => {
   return (
     <header className="fixed left-1/2 top-10 z-[999] -translate-x-1/2 w-full md:w-auto">
       <nav className="relative animate-jump-in animate-once animate-duration-1000">
-        <ul className="relative grid grid-cols-4 items-center justify-center py-2 border border-white/10 backdrop-blur-md rounded-full shadow-lg transition-all duration-200 ease-in-out mx-2 md:mx-0">
+        <ul className="relative grid grid-cols-3 items-center justify-center py-2 border border-white/10 backdrop-blur-md rounded-full shadow-lg transition-all duration-200 ease-in-out mx-2 md:mx-0">
           {navItems.map((item, index) => (
             <li
               key={index}
@@ -24,7 +23,7 @@ const Header = () => {
             </li>
           ))}
           <div
-            className={`absolute top-0 h-full w-1/4 bg-white/10 rounded-full transition-all duration-300 ${
+            className={`absolute top-0 h-full w-1/3 bg-white/10 rounded-full transition-all duration-300 ${
               hovered !== 0 ? "opacity-100" : "opacity-0"
             } left-0`}
             style={{
